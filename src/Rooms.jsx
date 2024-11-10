@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { io } from 'socket.io-client'
 
-const URL = 'http://localhost:3000'
+const URL = import.meta.env.VITE_BASE_URL
 
 const Rooms = ({name , localVideoTrack , localAudioTrack}) => {
     const [remoteVideoTrack, setremoteVideoTrack] = useState(null);
